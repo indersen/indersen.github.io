@@ -1,0 +1,8 @@
+Since I plan to gradually grow this website's design and features, this document lists all major changes done. The format is based on [[https://keepachangelog.com/en/1.1.0/][Keep a Changelog]].
+
+* 2024-12-26
+- Setup Github Action to publish the website whenever changes are pushed to Github.
+- Created .gitignore, build-site.el, build.sh files.
+- Created a git repository at Github to host the website.
+- Configured ox-publish to convert org documents into html files.
+- Created index file. This is the homepage.

@@ -1,0 +1,14 @@
+# exclude emacs backup files
+*.*~
+
+# exclude emacs auto-save files
+\#*#
+
+# exclude emacs symbolic links(lock files)
+.#*
+
+# exclude public/ directory
+public/
+
+# Don't commit downloaded Emacs packages
+.packages/

@@ -1,0 +1,3 @@
+Hello! Welcome to my corner of the internet.
+
+- You can view the changelog of this website [[file:changelog.org][here]]
