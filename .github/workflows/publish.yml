@@ -1,3 +1,5 @@
+name: Publish to GitHub Pages
+
 on:
   push:
     branches:
@@ -16,8 +18,8 @@ jobs:
       - name: Build the site
         run: ./build.sh
 
-      - name: Deploy to GitHub Pages
+      - name: Publish generated content to GitHub Pages
         uses: JamesIves/github-pages-deploy-action@v4.7.2
         with:
-	  branch: gh-pages
+          branch: gh-pages
           folder: public
