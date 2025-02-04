@@ -1,3 +1,4 @@
 Hello and welcome to my little corner of the internet.
 
+- [[file:large-language-models-explained-briefly.org][Large Language Models Explained Briefly]].
 - You can view the changelog of this website [[file:changelog.org][here]].

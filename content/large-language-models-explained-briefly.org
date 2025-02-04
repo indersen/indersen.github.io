@@ -1,0 +1,3 @@
+#+begin_quote
+A Large Language Model is a sophisticated mathematical function that can predict what word comes next for any piece of text.  ---[[https://www.youtube.com/watch?v=LPZh9BOjkQs][3Blue1Brown]]
+#+end_quote
