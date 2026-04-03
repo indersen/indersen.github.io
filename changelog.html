@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>&lrm;</title>
+<meta name="generator" content="Org Mode" />
+<link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+<div id="content" class="content">
+<p>
+Since I plan to gradually grow this website's design and features, this document lists all major changes done. The format is based on <a href="https://keepachangelog.com/en/1.1.0/">Keep a Changelog</a>.
+</p>
+
+<div id="outline-container-orgcb204a8" class="outline-2">
+<h2 id="orgcb204a8">2026-04-02</h2>
+<div class="outline-text-2" id="text-orgcb204a8">
+</div>
+<div id="outline-container-org74ca805" class="outline-3">
+<h3 id="org74ca805">Added</h3>
+<div class="outline-text-3" id="text-org74ca805">
+<ul class="org-ul">
+<li>Flat, topic-based URL scheme: <code>/slug</code> with no dates or type prefixes.</li>
+<li><code>#+SLUG:</code> keyword controls the published URL, decoupled from filename.</li>
+<li><code>oid:</code> links for internal navigation, resolved to <code>/slug.html</code> during build.</li>
+<li>Orugal naming convention for content files.</li>
+<li>Build-time slug uniqueness check.</li>
+</ul>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org8ac82d3" class="outline-2">
+<h2 id="org8ac82d3">2026-04-01</h2>
+<div class="outline-text-2" id="text-org8ac82d3">
+</div>
+<div id="outline-container-orgb3155ad" class="outline-3">
+<h3 id="orgb3155ad">Added</h3>
+<div class="outline-text-3" id="text-orgb3155ad">
+<ul class="org-ul">
+<li>Linkblog post types: link post (bold inline link + commentary) and quote post (blockquote + attribution).</li>
+<li>Custom typography with self-hosted Fraunces (serif) and Roboto Mono (monospace) fonts.</li>
+<li>CSS stylesheet with color palette and layout rules.</li>
+<li>Colophon page.</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org1caa9a8" class="outline-3">
+<h3 id="org1caa9a8">Changed</h3>
+<div class="outline-text-3" id="text-org1caa9a8">
+<ul class="org-ul">
+<li>Consolidated content and build tooling into a single repository.</li>
+<li>Cross-repo deploy: GitHub Action builds in indersen.com, pushes HTML to indersen.github.io.</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org630e83c" class="outline-3">
+<h3 id="org630e83c">Removed</h3>
+<div class="outline-text-3" id="text-org630e83c">
+<ul class="org-ul">
+<li>Emacs/Org version footer from published pages.</li>
+<li>Table of contents from changelog page.</li>
+</ul>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgd4569b0" class="outline-2">
+<h2 id="orgd4569b0">2024-12-26</h2>
+<div class="outline-text-2" id="text-orgd4569b0">
+</div>
+<div id="outline-container-org3de6679" class="outline-3">
+<h3 id="org3de6679">Added</h3>
+<div class="outline-text-3" id="text-org3de6679">
+<ul class="org-ul">
+<li>ox-publish pipeline to convert org documents to HTML.</li>
+<li>GitHub Action to publish the website on push.</li>
+<li>Homepage.</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</body>
+</html>
