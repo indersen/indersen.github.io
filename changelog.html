@@ -5,23 +5,62 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>&lrm;</title>
+<title>Changelog</title>
 <meta name="generator" content="Org Mode" />
 <link rel="stylesheet" href="/css/style.css">
 </head>
 <body>
 <div id="content" class="content">
+<h1 class="title">Changelog</h1>
 <p>
 Since I plan to gradually grow this website's design and features, this document lists all major changes done. The format is based on <a href="https://keepachangelog.com/en/1.1.0/">Keep a Changelog</a>.
 </p>
 
-<div id="outline-container-orgcb204a8" class="outline-2">
-<h2 id="orgcb204a8">2026-04-02</h2>
-<div class="outline-text-2" id="text-orgcb204a8">
+<div id="outline-container-org7e2fa8f" class="outline-2">
+<h2 id="org7e2fa8f">2026-04-03</h2>
+<div class="outline-text-2" id="text-org7e2fa8f">
 </div>
-<div id="outline-container-org74ca805" class="outline-3">
-<h3 id="org74ca805">Added</h3>
-<div class="outline-text-3" id="text-org74ca805">
+<div id="outline-container-org71f90a2" class="outline-3">
+<h3 id="org71f90a2">Added</h3>
+<div class="outline-text-3" id="text-org71f90a2">
+<ul class="org-ul">
+<li>Location-independent publishing: content can live anywhere in the vault, extracted into the site by marking a heading as publishable.</li>
+<li>Custom <code>:PUBLISHING:</code> drawer for publishing metadata (<code>:Type:</code>, <code>:Target:</code>, <code>:Slug:</code>), separate from standard org properties.</li>
+<li>Two-phase build: local extraction resolves links and gathers content, stock ox-publish generates HTML.</li>
+<li><code>C-c o p</code> keybinding to trigger content extraction from Emacs.</li>
+<li>Page titles in browser tabs (<code>#+TITLE:</code> now emitted for every page).</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org9664738" class="outline-3">
+<h3 id="org9664738">Changed</h3>
+<div class="outline-text-3" id="text-org9664738">
+<ul class="org-ul">
+<li><code>content/</code> is now a build artifact, fully regeneratable from source files.</li>
+<li><code>build-site.el</code> simplified to stock ox-publish &#x2014; no custom slug renaming or link handlers.</li>
+<li>Static assets (CSS, fonts) moved from <code>content/</code> to <code>src/static/</code>.</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org204519e" class="outline-3">
+<h3 id="org204519e">Removed</h3>
+<div class="outline-text-3" id="text-org204519e">
+<ul class="org-ul">
+<li>Custom <code>indersen/publish-to-html</code> function (slug renaming now handled by extraction).</li>
+<li>Custom <code>oid:</code> link handler in build (link resolution now handled by extraction).</li>
+<li>Build-time slug uniqueness check (now done at extraction time).</li>
+</ul>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orga6b5bd9" class="outline-2">
+<h2 id="orga6b5bd9">2026-04-02</h2>
+<div class="outline-text-2" id="text-orga6b5bd9">
+</div>
+<div id="outline-container-org31fea89" class="outline-3">
+<h3 id="org31fea89">Added</h3>
+<div class="outline-text-3" id="text-org31fea89">
 <ul class="org-ul">
 <li>Flat, topic-based URL scheme: <code>/slug</code> with no dates or type prefixes.</li>
 <li><code>#+SLUG:</code> keyword controls the published URL, decoupled from filename.</li>
@@ -33,13 +72,13 @@ Since I plan to gradually grow this website's design and features, this document
 </div>
 </div>
 
-<div id="outline-container-org8ac82d3" class="outline-2">
-<h2 id="org8ac82d3">2026-04-01</h2>
-<div class="outline-text-2" id="text-org8ac82d3">
+<div id="outline-container-org1ca4ef2" class="outline-2">
+<h2 id="org1ca4ef2">2026-04-01</h2>
+<div class="outline-text-2" id="text-org1ca4ef2">
 </div>
-<div id="outline-container-orgb3155ad" class="outline-3">
-<h3 id="orgb3155ad">Added</h3>
-<div class="outline-text-3" id="text-orgb3155ad">
+<div id="outline-container-org0bdecd6" class="outline-3">
+<h3 id="org0bdecd6">Added</h3>
+<div class="outline-text-3" id="text-org0bdecd6">
 <ul class="org-ul">
 <li>Linkblog post types: link post (bold inline link + commentary) and quote post (blockquote + attribution).</li>
 <li>Custom typography with self-hosted Fraunces (serif) and Roboto Mono (monospace) fonts.</li>
@@ -48,18 +87,18 @@ Since I plan to gradually grow this website's design and features, this document
 </ul>
 </div>
 </div>
-<div id="outline-container-org1caa9a8" class="outline-3">
-<h3 id="org1caa9a8">Changed</h3>
-<div class="outline-text-3" id="text-org1caa9a8">
+<div id="outline-container-orgcf306fe" class="outline-3">
+<h3 id="orgcf306fe">Changed</h3>
+<div class="outline-text-3" id="text-orgcf306fe">
 <ul class="org-ul">
 <li>Consolidated content and build tooling into a single repository.</li>
 <li>Cross-repo deploy: GitHub Action builds in indersen.com, pushes HTML to indersen.github.io.</li>
 </ul>
 </div>
 </div>
-<div id="outline-container-org630e83c" class="outline-3">
-<h3 id="org630e83c">Removed</h3>
-<div class="outline-text-3" id="text-org630e83c">
+<div id="outline-container-org126d984" class="outline-3">
+<h3 id="org126d984">Removed</h3>
+<div class="outline-text-3" id="text-org126d984">
 <ul class="org-ul">
 <li>Emacs/Org version footer from published pages.</li>
 <li>Table of contents from changelog page.</li>
@@ -68,13 +107,13 @@ Since I plan to gradually grow this website's design and features, this document
 </div>
 </div>
 
-<div id="outline-container-orgd4569b0" class="outline-2">
-<h2 id="orgd4569b0">2024-12-26</h2>
-<div class="outline-text-2" id="text-orgd4569b0">
+<div id="outline-container-orgfcf3239" class="outline-2">
+<h2 id="orgfcf3239">2024-12-26</h2>
+<div class="outline-text-2" id="text-orgfcf3239">
 </div>
-<div id="outline-container-org3de6679" class="outline-3">
-<h3 id="org3de6679">Added</h3>
-<div class="outline-text-3" id="text-org3de6679">
+<div id="outline-container-org660f10c" class="outline-3">
+<h3 id="org660f10c">Added</h3>
+<div class="outline-text-3" id="text-org660f10c">
 <ul class="org-ul">
 <li>ox-publish pipeline to convert org documents to HTML.</li>
 <li>GitHub Action to publish the website on push.</li>
